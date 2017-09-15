@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .site
+    article.campaign
+      header.campaign_header
+        .campaign_heading
+          img(src="/images/businessmaker-logo.png", alt="BusinessMaker Logo").campaign__logo
+
+      .campaign_text
+        p Yritykset taistelevat Devaajista ja DevOps-osaajista.
+        p Ja Asiakkaat heistä taistelevista yrityksistä.
+        p Sinä ansaitse rauhan. Ja parhaan mahdollisen toimittajan.
+        p Kilpailuta vain parhaat toimittajat. Yhdellä klikkauksella. Paras niistä voittakoon.
+
+      img(src="/images/Thinking_Face_Emoji.png", alt="Hmmm").campaign_smiley
+
+      h1.campaign_form_title Kenen kanssa haluaisit keskustella?
+
+      .campaign_form
+        .checkbox_wrapper
+          input(type="checkbox", checked="checked")#talented-checkbox
+          label(for="talented-checkbox").check-box.checkbox_label
+          span.checkbox_text Talented
+
+
+        img(src="/images/envelope-icon.png").envelope
+
+        h2.contact_title Anna yhteystietosi
+        p.contact_text Lähettämällä yhteydenottopyynnön yhteystietosi välitetään Talentedille.
+
+        .contact_details
+          input(name="name", type="text", placeholder="Nimi:")#name
+          input(name="email", type="email", placeholder="Sähköposti:")#email
+          input(name="phone", type="email", placeholder="Puhelinnumero:")#phone
+
+        p#validation_error.validation_error Syötä vähintään nimi ja joko sähköpostiosoite tai puhelinnumero.
+        p#success_message.success_message Kiitos kiinnostuksesta Talentedia kohtaan. Otamme yhteyttä mahdollisimman pian.
+
+        input(type="submit", value="Lähetä")#submit.submit
+
+      p © Talented 2017
