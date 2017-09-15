@@ -287,6 +287,10 @@ body {
     }
 }
 
+.campaign_logo {
+    max-width: 90%;
+}
+
 .campaign_text {
     font-size: 24px;
     max-width: 260px;
@@ -327,10 +331,6 @@ body {
         font-size: 70px;
         margin-bottom: 52px;
     }
-}
-
-.campaign_form {
-
 }
 
 .checkbox_wrapper {
