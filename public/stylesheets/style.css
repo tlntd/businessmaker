@@ -413,8 +413,14 @@ body {
 
 .validation_error {
     display: none;
-    padding: 32px;
+    padding: 32px 32px 0;
     color: #f488ff;
+}
+
+.success_message {
+    display: none;
+    padding: 32px 32px 0;
+    color: #5082FF;
 }
 
 .submit {
