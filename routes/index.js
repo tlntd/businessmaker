@@ -5,8 +5,14 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 function sendMail (data) {
+  const to = process.env.EMAIL_TO;
+
+  if (!to) {
+    throw new Error('Set EMAIL_TO');
+  }
+
   const msg = {
-    to: process.env.EMAIL_TO,
+    to: to,
     from: 'noreply@businessmakerbeta.fi',
     subject: '[BusinessMaker] New contact request',
     text: `
@@ -17,7 +23,7 @@ Email: ${data.email}
 Phone: ${data.phone} 
 `
   };
-  sgMail.send(msg);  
+  sgMail.send(msg).catch(err => console.error(err));
 }
 
 
